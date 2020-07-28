@@ -59,7 +59,7 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  isAuthorized: localStorage.getItem("isAuthorized"),
+  isAuthorized: sessionStorage.getItem("isAuthorized"),
 });
 
 export default connect(mapStateToProps, {})(Login);

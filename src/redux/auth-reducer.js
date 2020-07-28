@@ -6,7 +6,7 @@ const SET_TOKEN = "SET_TOKEN";
 const SET_AUTHORAIZED = "SET_AUTHORAIZED";
 let initialState = {
   token: null,
-  isAuthorized: localStorage.getItem("isAuthorized"),
+  isAuthorized: sessionStorage.getItem("isAuthorized"),
 };
 
 const authReducer = (state = initialState, action) => {
@@ -49,7 +49,7 @@ export const loginThunkCreator = (email, password) => {
             authorized: true,
             expiry: now.getTime(),
           };
-          localStorage.setItem("isAuthorized", JSON.stringify(authorized));
+          sessionStorage.setItem("isAuthorized", JSON.stringify(authorized));
           dispatch(setAuthorized(JSON.stringify(authorized)));
         }
       })

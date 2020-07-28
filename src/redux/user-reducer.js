@@ -161,7 +161,7 @@ export const getUsersThunkCreator = (page) => {
 export const followUser = (userId, param) => {
   return (dispatch) => {
     dispatch(setFollowProgress(true, userId));
-    let isAuthorized = JSON.parse(localStorage.getItem("isAuthorized"))
+    let isAuthorized = JSON.parse(sessionStorage.getItem("isAuthorized"))
       .authorized;
     if (isAuthorized) {
       usersAPI.followUser(userId, param).then(() => {

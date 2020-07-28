@@ -9,7 +9,7 @@ class HeaderContainer extends React.Component {
       authorized: false,
       expiry: 0,
     };
-    localStorage.setItem("isAuthorized", JSON.stringify(authorized));
+    sessionStorage.setItem("isAuthorized", JSON.stringify(authorized));
     this.props.setAuthorized(false);
   };
 
