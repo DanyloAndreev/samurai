@@ -1,0 +1,18 @@
+.header {
+    grid-area: h;
+    background-color: black;
+  }
+  
+  .header img {
+    width: 230px;
+      margin: 0 auto;
+  }
+
+  .login {
+      float: left;
+  }
+
+  .token {
+      color: white;
+  }
+  

@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    margin: 0 auto;
+    width: 1200px;
+
+    grid-template-areas:
+    "h h"
+    "n p";
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 3fr 9fr;
+}
+
+.wrapper-content {
+    grid-area: p;
+    background-color: lightgrey;
+}
+
+
+
+
+
