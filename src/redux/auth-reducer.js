@@ -6,10 +6,14 @@ const SET_TOKEN = "SET_TOKEN";
 const SET_AUTHORAIZED = "SET_AUTHORAIZED";
 let initialState = {
   token: null,
-  isAuthorized: sessionStorage.getItem("isAuthorized"),
+  isAuthorized:
+    sessionStorage.getItem("isAuthorized") === null
+      ? false
+      : sessionStorage.getItem("isAuthorized"),
 };
 
 const authReducer = (state = initialState, action) => {
+  debugger;
   switch (action.type) {
     case SET_TOKEN:
       return {
